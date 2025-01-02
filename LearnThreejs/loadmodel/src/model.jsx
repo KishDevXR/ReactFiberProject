@@ -1,17 +1,20 @@
 import { useGLTF, Float } from "@react-three/drei";
 
-export function LoadModel(props) {
+export function LoadModel( {isFloating, ...props}) {
   // Load the GLTF model using useGLTF
-  const { scene } = useGLTF("./apple.glb");
+  const { scene } = useGLTF("./nikeair.glb");
 
-  return (
+  return isFloating? (
     <Float
-      speed={2} // Animation speed
+      speed={1} // Animation speed
       rotationIntensity={1} // Rotation intensity
       floatIntensity={2} // Floating intensity
     >
-      <primitive object={scene} scale={5} castShadow receiveShadow {...props} />
+      <primitive object={scene} scale={2} castShadow receiveShadow {...props} />
     </Float>
+  ) : (
+
+    <primitive object={scene} scale={2} castShadow receiveShadow {...props} />
   );
 }
 
