@@ -17,7 +17,7 @@ const BackendControl = ({ isFloating, setIsFloating }) => {
         }}
         onClick={() => setIsFloating(!isFloating)}
       >
-        {isFloating ? "Disable Float" : "Enable Float"}
+        {isFloating ? "Animate" : "Animate"}
       </button>
     </div>
   );

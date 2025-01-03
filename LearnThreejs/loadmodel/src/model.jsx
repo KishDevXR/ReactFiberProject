@@ -10,11 +10,11 @@ export function LoadModel( {isFloating, ...props}) {
       rotationIntensity={1} // Rotation intensity
       floatIntensity={2} // Floating intensity
     >
-      <primitive object={scene} scale={2} castShadow receiveShadow {...props} />
+      <primitive object={scene} scale={1} castShadow receiveShadow {...props} />
     </Float>
   ) : (
 
-    <primitive object={scene} scale={2} castShadow receiveShadow {...props} />
+    <primitive object={scene} scale={1} castShadow receiveShadow {...props} />
   );
 }
 
